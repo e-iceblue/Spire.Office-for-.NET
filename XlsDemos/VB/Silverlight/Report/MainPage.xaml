@@ -1,0 +1,21 @@
+﻿<UserControl x:Class="Report.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="600" d:DesignWidth="500"
+             xmlns:dataInput="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Data.Input" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"
+                  xmlns:data="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Data" >
+
+    <Grid x:Name="LayoutRoot" Background="#FF003399" Height="500" Width="500" VerticalAlignment="Top" HorizontalAlignment="Center" Loaded="LayoutRoot_Loaded">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40" MaxHeight="40" MinHeight="40" />
+            <RowDefinition />
+            <RowDefinition Height="30" MaxHeight="30" MinHeight="30" />
+        </Grid.RowDefinitions>
+        <dataInput:Label HorizontalAlignment="Center" Name="labelTitle" VerticalAlignment="Center" Content="Countries List" Foreground="White" FontWeight="Bold" FontSize="16" Grid.ColumnSpan="2" />
+        <data:DataGrid AutoGenerateColumns="True" Grid.Row="1" HorizontalAlignment="Stretch" Name="dataGrid" VerticalAlignment="Stretch" Margin="1" />
+        <Button Content="Generate" Grid.Row="2" HorizontalAlignment="Right" Margin="0,0,2,0" Name="buttonGenerate" VerticalAlignment="Center" Width="75" IsEnabled="False" Click="buttonGenerate_Click" />
+    </Grid>
+</UserControl>

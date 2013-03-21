@@ -1,0 +1,10 @@
+﻿<Window x:Class="FontStylesWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="130" Width="540" DataContext="{Binding}" WindowStartupLocation="CenterScreen" MinWidth="540" MinHeight="130" MaxWidth="540" MaxHeight="130" Topmost="False" ResizeMode="NoResize" Foreground="#00000000" Background="#E33675F9">
+    <Grid Margin="0,0,0,0" Background="{x:Null}" Height="102">
+        <Label Content="The sample demonstrates how to set font formatting in an excel workbook." HorizontalAlignment="Left" Margin="14,14,0,64" Name="label1" Width="452" Height="30"/>
+        <Button Content="Run" Height="23" Name="btnRun" Width="75" Margin="336,55,0,24" HorizontalAlignment="Left" Click="btnRun_Click" />
+        <Button Content="Close" Height="23" Name="btnClose" Width="75" Margin="0,55,26,24" HorizontalAlignment="Right" Click="btnClose_Click" />
+    </Grid>
+</Window>

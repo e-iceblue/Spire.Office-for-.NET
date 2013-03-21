@@ -1,0 +1,25 @@
+﻿<Window x:Class="ExtendFunction.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Spire.PDFViewer for .NET - Demo - External Function" Height="600" Width="800" xmlns:my="clr-namespace:Spire.PdfViewer.Wpf;assembly=Spire.PdfViewer.Wpf" Loaded="Window_Loaded">
+    <Grid >
+        <DockPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch" LastChildFill="True">
+            <ToolBarTray DockPanel.Dock="Top" Height="32">
+            <ToolBar Height="32" >       
+                <Button ToolTip="Open PDF document" Name="btnOpen" Click="btnOpen_Click">
+                        <Image Source="/ExtendFunction;component/Resources/Open.png"></Image>
+                    </Button>              
+                <Button  Name="btnInfo" ToolTip="PDF document info" Click="btnInfo_Click">
+                        <Image Source="/ExtendFunction;component/Resources/Info.png"></Image>
+                </Button>
+                <TextBox Name="txtUrl" Width="670" KeyDown="txtUrl_KeyDown"></TextBox>
+                <Button ToolTip="Load web page" Name="btnLink" Click="btnLink_Click">
+                        <Image Source="/ExtendFunction;component/Resources/link.png"></Image>
+                    </Button>
+            </ToolBar>
+            </ToolBarTray>
+            <my:PdfDocumentViewer  Name="pdfDocumentViewer1"  />
+        </DockPanel>
+        
+    </Grid>
+</Window>

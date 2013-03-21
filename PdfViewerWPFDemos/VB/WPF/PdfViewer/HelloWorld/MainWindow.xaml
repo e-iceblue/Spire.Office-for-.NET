@@ -1,0 +1,8 @@
+﻿<Window x:Class="PdfViewer_HelloWorld.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Spire.PDFViewer for .NET – Demo – How to Use PdfViewer Component." Background="Bisque" Height="600" Width="800" xmlns:my="clr-namespace:Spire.PdfViewer.Wpf;assembly=Spire.PdfViewer.Wpf" Loaded="Window_Loaded">
+    <Grid>
+        <my:PdfViewer Height="Auto" HorizontalAlignment="Stretch" Margin="0" Name="pDFViewer1" VerticalAlignment="Stretch" Width="Auto" />
+    </Grid>
+</Window>

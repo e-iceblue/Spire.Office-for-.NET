@@ -1,0 +1,21 @@
+﻿<Window x:Class="PageLayoutMode.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Spire.PDFViewer for .NET - Demo - Page Layout Mode" Height="600" Width="800" xmlns:my="clr-namespace:Spire.PdfViewer.Wpf;assembly=Spire.PdfViewer.Wpf" Loaded="Window_Loaded">
+    <Grid>
+        <DockPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch" LastChildFill="True">
+            <ToolBar DockPanel.Dock="Top" Height="32" >
+                <Button Name="btnOpen" ToolTip="Open PDF document" Click="btnOpen_Click">
+                    <Image Source="/PageLayoutMode;component/Resources/Open.png" Height="32" Width="32"></Image>
+                </Button>              
+                <ComboBox  Name="CboLayoutMode" SelectionChanged="CboLayoutMode_SelectionChanged">
+                    <ComboBoxItem Content="SingleContinuous" IsSelected="True"></ComboBoxItem>
+                    <ComboBoxItem Content="SingleDiscontinuous"></ComboBoxItem>
+                    <ComboBoxItem Content="TwoContinuous"></ComboBoxItem>
+                    <ComboBoxItem Content="TwoDiscontinuous"></ComboBoxItem>
+                </ComboBox>
+            </ToolBar>
+            <my:PdfDocumentViewer  Name="pdfDocumentViewer1"   />
+        </DockPanel>
+    </Grid>
+</Window>

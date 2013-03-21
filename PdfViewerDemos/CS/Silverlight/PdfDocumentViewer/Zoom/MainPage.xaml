@@ -1,0 +1,48 @@
+﻿<UserControl x:Class="Zoom.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="659" d:DesignWidth="930" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" xmlns:my="clr-namespace:Spire.PdfViewer.SL;assembly=Spire.PdfViewer.SL" Loaded="UserControl_Loaded">
+
+    <Grid x:Name="LayoutRoot" Background="White" Loaded="LayoutRoot_Loaded">
+        <Button Content="Open Document" Height="28" HorizontalAlignment="Left" Margin="12,26,0,0" Name="btnOpen" VerticalAlignment="Top" Width="96" Click="btnOpen_Click" />
+        <sdk:TabControl Height="64" HorizontalAlignment="Left" Margin="114,0,0,0" Name="tabControl1" VerticalAlignment="Top" Width="422">
+            <sdk:TabItem Header="zoom" Name="tabItem1">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="246*" />
+                        <ColumnDefinition Width="164*" />
+                    </Grid.ColumnDefinitions>
+                    <Button Height="30" HorizontalAlignment="Left" Margin="6,0,0,0" Name="btnZoomIn" VerticalAlignment="Top" Width="86" Click="btnZoomIn_Click">
+                        <StackPanel Height="26" Width="78" Orientation="Horizontal">
+                            <Image Source="Resource/ZoomIn.png" Height="26" Width="23" Stretch="None"></Image>
+                            <TextBlock Text="Zoom In" Height="20"></TextBlock>
+                        </StackPanel>
+                    </Button>
+                    <Button  Height="30" HorizontalAlignment="Left" Margin="98,0,0,0" Name="btnZoomOut" VerticalAlignment="Top" Width="99" Click="btnZoomOut_Click">
+                        <StackPanel Height="28" Width="95" Orientation="Horizontal">
+                            <Image Source="Resource/ZoomOut.png" Height="22" Width="27" Stretch="None"></Image>
+                            <TextBlock Text="Zoom Out" Width="63" Height="21"></TextBlock>
+                        </StackPanel>
+                    </Button>
+                    <Button  Height="30" HorizontalAlignment="Left" Margin="80,0,0,0" Name="btnFitWidth" VerticalAlignment="Top" Width="31" Click="btnFitWidth_Click" Grid.Column="1">
+                        <Image Source="Resource/FitWidth.png"></Image>
+                    </Button>
+                    <Button  Height="31" HorizontalAlignment="Left" Margin="121,-1,0,0" Name="btnFitPage" VerticalAlignment="Top" Width="35" Click="btnFitPage_Click" Grid.Column="1">
+                        <Image Source="Resource/FitPage.png"></Image>
+                    </Button>
+                    <ComboBox Height="23"  HorizontalAlignment="Left" Margin="202,4,0,0" Name="cmbCurrentZoomLevel" VerticalAlignment="Top" Width="107" Grid.ColumnSpan="2" SelectionChanged="cmbCurrentZoomLevel_SelectionChanged">
+                        <ComboBoxItem>25%</ComboBoxItem>
+                        <ComboBoxItem>50%</ComboBoxItem>
+                        <ComboBoxItem>100%</ComboBoxItem>
+                        <ComboBoxItem>150%</ComboBoxItem>
+                        <ComboBoxItem>200%</ComboBoxItem>
+                    </ComboBox>
+                </Grid>
+            </sdk:TabItem>
+        </sdk:TabControl>
+        <my:PdfDocumentViewer HorizontalAlignment="Stretch" Margin="0,64,0,0" Name="pdfDocumentViewer1" VerticalAlignment="Stretch" />
+    </Grid>
+</UserControl>

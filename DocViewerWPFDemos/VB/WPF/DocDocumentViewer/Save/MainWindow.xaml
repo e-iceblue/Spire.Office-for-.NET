@@ -1,0 +1,41 @@
+﻿<Window x:Class="Save.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Spire.DocViewer for .NET - Demo – Save PDF via DocDocumentViewer Component." 
+        Background="Bisque" Height="600" Width="800" 
+        xmlns:my="clr-namespace:Spire.DocViewer.Wpf;assembly=Spire.DocViewer.Wpf"
+        Loaded="Window_Loaded" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <my:DocDocumentViewer Height="Auto" HorizontalAlignment="Stretch" Margin="0,40,0,0" Name="docDocumentViewer1" VerticalAlignment="Stretch" Width="Auto" HorizontalScrollBarVisibility="Auto" />
+        <ToolBarTray Height="40" VerticalAlignment="Top">
+            <ToolBar Height="40" Width="Auto" VerticalAlignment="Top" HorizontalAlignment="Stretch">
+                <Button Name="btnOpen" ToolTip="Open from File" Click="btnOpen_Click">
+                    <Image Source="/Resources/Open.png"></Image>
+                </Button>
+                <Button Name="btnClose" ToolTip="Close" Click="btnClose_Click">
+                    <Image Source="/Resources/Close.png"></Image>
+                </Button>
+            </ToolBar>
+            <ToolBar Height="40">
+                <Button ToolTip="Convert Doc document to Pdf document" Name="btnSaveToPdf" Click="btnSaveToPdf_Click">
+                    <StackPanel Height="24" Width="Auto" Margin="0" Orientation="Horizontal">
+                        <Image Source="/Resources/ToPdf.png" Stretch="UniformToFill"></Image>
+                        <TextBlock VerticalAlignment="Center">To Pdf</TextBlock>
+                    </StackPanel>
+                </Button>
+                <Button ToolTip="Save as Word97-2003 format document" Name="btnSaveToDoc97_2k3" Click="btnSaveToDoc97_2k3_Click">
+                    <StackPanel Height="24" Width="Auto" Margin="0" Orientation="Horizontal">
+                        <Image Source="/Resources/ToDoc.png"></Image>
+                        <TextBlock VerticalAlignment="Center">To Doc</TextBlock>
+                    </StackPanel>
+                </Button>
+                <Button ToolTip="Save as Word2007-2010 format document" Name="btnSaveToDoc2007_2010" Click="btnSaveToDoc2007_2010_Click">
+                    <StackPanel Height="24" Width="Auto" Margin="0" Orientation="Horizontal">
+                        <Image Source="/Resources/ToDocx.png"></Image>
+                        <TextBlock VerticalAlignment="Center">To Docx</TextBlock>
+                    </StackPanel>
+                </Button>
+            </ToolBar>
+        </ToolBarTray>
+    </Grid>
+</Window>

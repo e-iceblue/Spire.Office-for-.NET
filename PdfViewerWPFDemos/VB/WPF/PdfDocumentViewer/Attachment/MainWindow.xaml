@@ -1,0 +1,26 @@
+﻿<Window x:Class="Attachment.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Spire.PDFViewer for .NET - Demo - Attachments" Height="600" Width="800" xmlns:my="clr-namespace:Spire.PdfViewer.Wpf;assembly=Spire.PdfViewer.Wpf" Loaded="Window_Loaded">
+    <Grid>
+        <DockPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch" LastChildFill="True">        
+            <ToolBar DockPanel.Dock="Top" Height="32">
+                <Button  Name="btnOpen" Click="btnOpen_Click">
+                    <Image Source="Resouces/Open.png"></Image>
+                </Button>
+                <Button ToolTip="PDF document attachment annotation" Name="btnAnnotation" Click="btnAnnotation_Click">
+                    <Image Source="Resouces/attachmentAnnotation.png"></Image>
+                </Button>
+                <Button ToolTip="PDF document attachment" Name="btnAttachment" Click="btnAttachment_Click">
+                    <Image Source="/Attachment;component/Resouces/attachment.png"></Image>
+                </Button>
+                <Button ToolTip="Close PDF Attachment" Name="btnCloseAttachment" Click="btnCloseAttachment_Click">
+                    <Image Source="/Attachment;component/Resouces/Close.png"></Image>
+                </Button>
+            </ToolBar>                 
+            <ListView Name="listView1" DockPanel.Dock="Top"   MouseDoubleClick="listView1_MouseDoubleClick"></ListView>
+            <my:PdfDocumentViewer  Name="pdfDocumentViewer1"  />
+        </DockPanel>
+        
+    </Grid>
+</Window>

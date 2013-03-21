@@ -1,0 +1,35 @@
+﻿<UserControl x:Class="Paging.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="631" d:DesignWidth="722" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" xmlns:my="clr-namespace:Spire.PdfViewer.SL;assembly=Spire.PdfViewer.SL" Loaded="UserControl_Loaded">
+
+    <Grid x:Name="LayoutRoot" Background="White">
+        <Button Content="Open Document" Height="28" HorizontalAlignment="Left" Margin="12,20,0,0" Name="btnOpen" Click="btnOpen_Click" VerticalAlignment="Top" Width="95" />
+        <sdk:TabControl Height="61" HorizontalAlignment="Left" Margin="113,0,0,0" Name="tabControl1" VerticalAlignment="Top" Width="279">
+            <sdk:TabItem Header="Paging" Name="tabItem1">
+                <Grid Width="265" Height="27">
+                    <Button IsEnabledChanged="btnFirst_IsEnabledChanged" Name="btnGotoFirst" Click="btnGotoFirst_Click" Height="24" HorizontalAlignment="Left" Margin="12,0,0,0"  VerticalAlignment="Top" Width="27">
+                        <Image Source="Resource/GotoFirstPage_Disabled.png" Stretch="None"></Image>
+                    </Button>
+                    <Button IsEnabledChanged="btnPre_IsEnabledChanged" Name="btnGotoPre" Click="btnGotoPre_Click" Height="24" HorizontalAlignment="Right" Margin="0,0,193,0" VerticalAlignment="Top" Width="26">
+                        <Image Source="Resource/GotoPreviousPage_Disabled.png" Stretch="None"></Image>
+                    </Button>
+                    <Button IsEnabledChanged="btnNext_IsEnabledChanged" Name="btnGotoNext" Click="btnGotoNext_Click" Height="24" HorizontalAlignment="Left" Margin="185,0,0,0"  VerticalAlignment="Top" Width="32">
+                        <Image Source="Resource/GotoNextPage_Disabled.png" Stretch="None"></Image>
+                    </Button>
+                    <Button IsEnabledChanged="btnLast_IsEnabledChanged" Name="btnGotoLast" Click="btnGotoLast_Click" Height="24" HorizontalAlignment="Left" Margin="225,0,0,0" VerticalAlignment="Top" Width="29">
+                        <Image Source="Resource/GotoLastPage_Disabled.png" Stretch="None"></Image>
+                    </Button>
+                    <TextBox  Height="21" HorizontalAlignment="Right" Margin="0,3,140,0" Name="txtCurrentPageIndex" VerticalAlignment="Top" Width="41" KeyDown="txtCurrentPageIndex_KeyDown" />
+                    <TextBlock Height="23" HorizontalAlignment="Center" Margin="128,-2,119,6" Name="textBlock1" Text="/" VerticalAlignment="Center" Width="18" FontSize="18" />
+                    <TextBlock Height="17" HorizontalAlignment="Left" Margin="142,5,0,0" Name="txtPageCount" Text="100" VerticalAlignment="Top" Width="45" />
+                </Grid>
+            </sdk:TabItem>
+        </sdk:TabControl>
+        <my:PdfDocumentViewer HorizontalAlignment="Stretch" Margin="0,67,0,0" Name="pdfDocumentViewer1" VerticalAlignment="Stretch" />
+        <CheckBox Content="Hand Tool" Height="22" HorizontalAlignment="Left" Margin="411,31,0,0" Name="chkHandTool" VerticalAlignment="Top" Click="chkHandTool_Click" />
+    </Grid>
+</UserControl>

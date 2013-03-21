@@ -1,0 +1,20 @@
+﻿<Window x:Class="PdfDocumentThumbnail.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Spire.PDFViewer for .NET - Demo - Thumbnail" Height="600" Width="800" xmlns:my="clr-namespace:Spire.PdfViewer.Wpf.PdfThumbnails;assembly=Spire.PdfViewer.Wpf" xmlns:my1="clr-namespace:Spire.PdfViewer.Wpf;assembly=Spire.PdfViewer.Wpf" Loaded="Window_Loaded">
+    <Grid>
+        <DockPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            <ToolBar Height="32" DockPanel.Dock="Top">
+                <Button Name="btnOpen" ToolTip="Open PDF document" Click="btnOpen_Click">
+                    <Image Source="/Thumbnail;component/Resources/Open.png" ></Image>
+                </Button>
+                <Button Name="btnThumnail" ToolTip="Display PDF document thumbnail" Click="btnThumnail_Click">
+                    <Image Source="/Thumbnail;component/Resources/thumbnail.png"></Image>
+                </Button>
+            </ToolBar>
+            <my:PdfDocumentThumbnail  Name="pdfDocumentThumbnail1" Width="120" DockPanel.Dock="Left">
+            </my:PdfDocumentThumbnail>
+            <my1:PdfDocumentViewer Name="pdfDocumentViewer1" DockPanel.Dock="Right" />
+        </DockPanel>
+    </Grid>
+</Window>

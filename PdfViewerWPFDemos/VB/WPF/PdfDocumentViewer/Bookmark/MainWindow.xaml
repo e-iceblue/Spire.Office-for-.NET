@@ -1,0 +1,18 @@
+﻿<Window x:Class="Bookmark.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Spire.PDFViewer for .NET - Demo - Bookmark" Height="600" Width="800" xmlns:my="clr-namespace:Spire.PdfViewer.Wpf;assembly=Spire.PdfViewer.Wpf" Loaded="Window_Loaded">
+    <Grid>
+        <DockPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            <ToolBar DockPanel.Dock="Top" Height="32" >
+                <Button Name="btnOpen" ToolTip="Open PDF document"   Click="btnOpen_Click" >
+                    <Image Source="/Bookmark;component/Resources/Open.png"></Image>
+                </Button>
+                </ToolBar>
+            <TreeView Name="treeView1" DockPanel.Dock="Left"  Width="230" SelectedItemChanged="TreeView_SelectedItemChanged"></TreeView>
+            <my:PdfDocumentViewer  Name="pdfDocumentViewer1"  DockPanel.Dock="Right" PdfLoaded="pdfDocumentViewer1_PdfLoaded" />
+        </DockPanel>
+        
+        
+    </Grid>
+</Window>

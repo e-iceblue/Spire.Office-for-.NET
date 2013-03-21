@@ -1,0 +1,33 @@
+﻿<Window x:Class="Save.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Spire.PDFViewer for .NET - Demo – Save PDF via PdfViewerDocument Component" Background="Bisque" Height="600" Width="800" xmlns:my="clr-namespace:Spire.PdfViewer.Wpf;assembly=Spire.PdfViewer.Wpf" Loaded="Window_Loaded">
+    <Grid>
+        <my:PdfDocumentViewer Height="Auto" HorizontalAlignment="Stretch" Margin="0,37,0,0" Name="pdfDocumentViewer1" VerticalAlignment="Stretch" Width="Auto" HorizontalScrollBarVisibility="Auto" />
+        <ToolBarTray Height="35" VerticalAlignment="Top">
+            <ToolBar Height="35" Width="Auto" VerticalAlignment="Top" HorizontalAlignment="Stretch">
+                <Button Name="btnOpen" ToolTip="Open from File" Click="btnOpen_Click">
+                    <Image Source="/Resources/Open.png"></Image>
+                </Button>
+                <Button Name="btnClose" ToolTip="Close" Click="btnClose_Click">
+                    <Image Source="/Resources/Close.png"></Image>
+                </Button>
+            </ToolBar>
+            <ToolBar Height="35">
+                <Button ToolTip="Save" Name="btnSave" Click="btnSave_Click">
+                    <StackPanel Height="24" Width="Auto" Margin="0" Orientation="Horizontal">
+                        <Image Source="/Resources/Save.png" Stretch="UniformToFill"></Image>
+                        <TextBlock VerticalAlignment="Center">Save</TextBlock>
+                    </StackPanel>
+
+                </Button>
+                <Button ToolTip="Save as Stream" Name="btnSaveStream" Click="btnSaveStream_Click">
+                    <StackPanel Height="24" Width="Auto" Margin="0" Orientation="Horizontal">
+                        <Image Source="/Resources/Save_Stream.png"></Image>
+                        <TextBlock VerticalAlignment="Center">Save Stream</TextBlock>
+                    </StackPanel>
+                </Button>
+            </ToolBar>
+        </ToolBarTray>
+    </Grid>
+</Window>

@@ -1,0 +1,49 @@
+﻿<Window x:Class="Zoom.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Spire.PDFViewer for .NET - Demo – Zoom PDF via PdfViewerDocument Component" Background="Bisque" Height="600" Width="800" xmlns:my="clr-namespace:Spire.PdfViewer.Wpf;assembly=Spire.PdfViewer.Wpf" Loaded="Window_Loaded">
+    <Grid>
+        <my:PdfDocumentViewer Height="Auto" HorizontalAlignment="Stretch" Margin="0,37,0,0" Name="pdfDocumentViewer1" VerticalAlignment="Stretch" Width="Auto" HorizontalScrollBarVisibility="Auto" />
+        <ToolBarTray Height="35" VerticalAlignment="Top">
+            <ToolBar Height="35" Width="Auto" VerticalAlignment="Top" HorizontalAlignment="Stretch">
+                <Button Name="btnOpen" ToolTip="Open from File" Click="btnOpen_Click">
+                    <Image Source="/Resources/Open.png"></Image>
+                </Button>
+                <Button Name="btnClose" ToolTip="Close" Click="btnClose_Click">
+                    <Image Source="/Resources/Close.png"></Image>
+                </Button>
+            </ToolBar>
+            <ToolBar Height="35">
+                <Button ToolTip="Zoom In" Name="btnZooIn" Click="btnZooIn_Click">
+                    <StackPanel Height="24" Width="Auto" Margin="0" Orientation="Horizontal">
+                        <Image Source="/Resources/ZoomIn.png" Stretch="UniformToFill"></Image>
+                        <TextBlock VerticalAlignment="Center">Zoom In</TextBlock>
+                    </StackPanel>
+                </Button>
+
+                <Button ToolTip="Zoom Out" Name="btnZoomOut" Click="btnZoomOut_Click">
+                    <StackPanel Height="24" Width="Auto" Margin="0" Orientation="Horizontal">
+                        <Image Source="/Resources/ZoomOut.png"></Image>
+                        <TextBlock VerticalAlignment="Center">Zoom Out</TextBlock>
+                    </StackPanel>
+                </Button>
+                <ComboBox Name="cmbCurrentZoomLevel" Width="80" SelectedIndex="2" IsEditable="True" SelectionChanged="cmbCurrentZoomLevel_SelectionChanged" IsTextSearchEnabled="False">
+                    <ComboBoxItem>10%</ComboBoxItem>
+                    <ComboBoxItem>50%</ComboBoxItem>
+                    <ComboBoxItem>100%</ComboBoxItem>
+                    <ComboBoxItem>150%</ComboBoxItem>
+                    <ComboBoxItem>200%</ComboBoxItem>
+                    <ComboBoxItem>400%</ComboBoxItem>
+                    <ComboBoxItem>800%</ComboBoxItem>
+                    <ComboBoxItem>1600%</ComboBoxItem>
+                </ComboBox>
+                <Button ToolTip="Fit Width" Height="30" Width="30" Name="btnFitWidth" Click="btnFitWidth_Click">
+                    <Image Source="/Resources/FitWidth.png"></Image>
+                </Button>
+                <Button ToolTip="Fit Page" Name="btnFitPage" Click="btnFitPage_Click">
+                    <Image Source="/Resources/FitPage.png"></Image>
+                </Button>
+            </ToolBar>
+        </ToolBarTray>
+    </Grid>
+</Window>

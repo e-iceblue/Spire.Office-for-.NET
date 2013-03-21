@@ -1,0 +1,39 @@
+﻿<UserControl x:Class="Export.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="625" d:DesignWidth="814" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" xmlns:my="clr-namespace:Spire.PdfViewer.SL;assembly=Spire.PdfViewer.SL" Loaded="UserControl_Loaded">
+
+    <Grid x:Name="LayoutRoot" Background="White" Loaded="LayoutRoot_Loaded">
+        <Button Content="Open File" Height="34" HorizontalAlignment="Left" Margin="12,19,0,0" Name="btnOPen" VerticalAlignment="Top" Width="75" Click="btnOpen_Click" />
+        <sdk:TabControl Height="73" HorizontalAlignment="Left" Margin="112,0,0,0" Name="tabControl1" VerticalAlignment="Top" Width="401">
+            <sdk:TabItem Header="Export" Name="tabItem1">
+                <Grid Height="39">
+                    <CheckBox Content="From" Height="16" HorizontalAlignment="Left" Margin="0,9,0,0" Name="ckbFrom" VerticalAlignment="Top" IsChecked="True" />
+                    <CheckBox Content="To" Height="16" HorizontalAlignment="Right" Margin="0,11,220,0" Name="ckbTo" VerticalAlignment="Top" Click="ckbTo_Click" />
+                    <TextBox Height="23" HorizontalAlignment="Left" Margin="55,6,0,0" Name="txtFrom" VerticalAlignment="Top" Width="65" IsEnabled="False" />
+                    <TextBox Height="23" HorizontalAlignment="Left" Margin="175,7,0,0" Name="txtTo" VerticalAlignment="Top" Width="77" />
+                    <Button Content="Save as Image" Height="31" HorizontalAlignment="Left" Margin="282,4,0,0" Name="btnSaveAsImg" VerticalAlignment="Top" Width="101" Click="btnSaveAsImg_Click" />
+                </Grid>
+            </sdk:TabItem>
+        </sdk:TabControl>
+
+
+        <sdk:TabControl HorizontalAlignment="Stretch" Margin="0,79,0,4" Name="tabControl2" VerticalAlignment="Stretch" Width="Auto">
+            <sdk:TabItem Header="PdfDocumentViewer" Name="tabItem3">
+                <Grid>
+                    <my:PdfDocumentViewer Height="Auto" HorizontalAlignment="Stretch" Margin="0,0,0,0" Name="pdfDocumentViewer1" VerticalAlignment="Stretch" Width="Auto" />
+                </Grid>
+
+            </sdk:TabItem>
+            <sdk:TabItem Header="Images" Name="tabImg">
+                <ScrollViewer Name="scrollViewer1" HorizontalScrollBarVisibility="Visible" Height="Auto" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="Auto">
+                    <Canvas Name="canvasImg" Width="1000" Height="40">
+                    </Canvas>
+                </ScrollViewer>
+            </sdk:TabItem>
+        </sdk:TabControl>
+    </Grid>
+</UserControl>

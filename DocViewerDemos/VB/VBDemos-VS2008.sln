@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DocViewer", "DocViewer", "{5FD5E0DF-6BF1-4339-843D-C3596A93DD52}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DocDocumentViewer", "DocDocumentViewer", "{B4A01E1C-FF3C-458E-8D8E-37DA2BE33CD8}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "HelloWorld-VS2008", "WinForms\DocViewer\HelloWorld\HelloWorld-VS2008.vbproj", "{32159D0B-DA2D-4A82-8BF9-9A266EA769FF}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Export-VS2008", "WinForms\DocDocumentViewer\Export\Export-VS2008.vbproj", "{F1DB313E-CB41-401D-A315-A5E99A9C13EA}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Open-VS2008", "WinForms\DocDocumentViewer\Open\Open-VS2008.vbproj", "{156C63AC-7CE7-4343-8677-7E6993CE8395}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Print-VS2008", "WinForms\DocDocumentViewer\Print\Print-VS2008.vbproj", "{8197BD92-BCCA-40BC-A947-6C4D0FC467CE}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Save-VS2008", "WinForms\DocDocumentViewer\Save\Save-VS2008.vbproj", "{63AD4FB1-69E3-4371-ADDD-A17822A4D96C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{32159D0B-DA2D-4A82-8BF9-9A266EA769FF}.Debug|x86.ActiveCfg = Debug|x86
+		{32159D0B-DA2D-4A82-8BF9-9A266EA769FF}.Debug|x86.Build.0 = Debug|x86
+		{32159D0B-DA2D-4A82-8BF9-9A266EA769FF}.Release|x86.ActiveCfg = Release|x86
+		{32159D0B-DA2D-4A82-8BF9-9A266EA769FF}.Release|x86.Build.0 = Release|x86
+		{F1DB313E-CB41-401D-A315-A5E99A9C13EA}.Debug|x86.ActiveCfg = Debug|x86
+		{F1DB313E-CB41-401D-A315-A5E99A9C13EA}.Debug|x86.Build.0 = Debug|x86
+		{F1DB313E-CB41-401D-A315-A5E99A9C13EA}.Release|x86.ActiveCfg = Release|x86
+		{F1DB313E-CB41-401D-A315-A5E99A9C13EA}.Release|x86.Build.0 = Release|x86
+		{156C63AC-7CE7-4343-8677-7E6993CE8395}.Debug|x86.ActiveCfg = Debug|x86
+		{156C63AC-7CE7-4343-8677-7E6993CE8395}.Debug|x86.Build.0 = Debug|x86
+		{156C63AC-7CE7-4343-8677-7E6993CE8395}.Release|x86.ActiveCfg = Release|x86
+		{156C63AC-7CE7-4343-8677-7E6993CE8395}.Release|x86.Build.0 = Release|x86
+		{8197BD92-BCCA-40BC-A947-6C4D0FC467CE}.Debug|x86.ActiveCfg = Debug|x86
+		{8197BD92-BCCA-40BC-A947-6C4D0FC467CE}.Debug|x86.Build.0 = Debug|x86
+		{8197BD92-BCCA-40BC-A947-6C4D0FC467CE}.Release|x86.ActiveCfg = Release|x86
+		{8197BD92-BCCA-40BC-A947-6C4D0FC467CE}.Release|x86.Build.0 = Release|x86
+		{63AD4FB1-69E3-4371-ADDD-A17822A4D96C}.Debug|x86.ActiveCfg = Debug|x86
+		{63AD4FB1-69E3-4371-ADDD-A17822A4D96C}.Debug|x86.Build.0 = Debug|x86
+		{63AD4FB1-69E3-4371-ADDD-A17822A4D96C}.Release|x86.ActiveCfg = Release|x86
+		{63AD4FB1-69E3-4371-ADDD-A17822A4D96C}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{32159D0B-DA2D-4A82-8BF9-9A266EA769FF} = {5FD5E0DF-6BF1-4339-843D-C3596A93DD52}
+		{F1DB313E-CB41-401D-A315-A5E99A9C13EA} = {B4A01E1C-FF3C-458E-8D8E-37DA2BE33CD8}
+		{156C63AC-7CE7-4343-8677-7E6993CE8395} = {B4A01E1C-FF3C-458E-8D8E-37DA2BE33CD8}
+		{8197BD92-BCCA-40BC-A947-6C4D0FC467CE} = {B4A01E1C-FF3C-458E-8D8E-37DA2BE33CD8}
+		{63AD4FB1-69E3-4371-ADDD-A17822A4D96C} = {B4A01E1C-FF3C-458E-8D8E-37DA2BE33CD8}
+	EndGlobalSection
+EndGlobal

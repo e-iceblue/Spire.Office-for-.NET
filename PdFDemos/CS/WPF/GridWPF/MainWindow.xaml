@@ -1,0 +1,15 @@
+﻿<Window x:Class="GridWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="650" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
+<Grid x:Name="LayoutRoot" Background="#FB039AE6">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40" MaxHeight="40" MinHeight="40" />
+            <RowDefinition />
+            <RowDefinition Height="40" MaxHeight="40" MinHeight="40" />
+        </Grid.RowDefinitions>
+        <Label HorizontalAlignment="Center" Margin="0" Name="labelTitle" VerticalAlignment="Center" Content="Vendor List" FontSize="15" Grid.Row="0" HorizontalContentAlignment="Center" Foreground="White" />
+        <DataGrid Name="dataGridVendorList" Grid.Row="1" Grid.RowSpan="1" AllowDrop="False" />
+        <Button Content="Run" HorizontalAlignment="Right" Margin="0,0,3,0" Name="buttonRub" VerticalAlignment="Center" Grid.Row="2" Click="buttonRun_Click" Width="70" />
+    </Grid>
+</Window>

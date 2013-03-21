@@ -1,0 +1,24 @@
+﻿<Window x:Class="Rotate.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Spire.PDFViewer for .NET - Demo - Rotate" Height="600" Width="800" xmlns:my="clr-namespace:Spire.PdfViewer.Wpf;assembly=Spire.PdfViewer.Wpf" Loaded="Window_Loaded">
+    <Grid>
+        <DockPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch" LastChildFill="True">
+            <ToolBar DockPanel.Dock="Top" Height="32">
+                <Button ToolTip="Open PDF document" Name="btnOpen" Click="btnOpen_Click">
+                    <Image Source="/Rotate;component/Resources/Open.png"></Image>
+                </Button>
+                <ComboBox Name="CboRotate" >
+                    <ComboBoxItem Content="Rotate0" IsSelected="True"></ComboBoxItem>
+                    <ComboBoxItem Content="Rotate90"></ComboBoxItem>
+                    <ComboBoxItem Content="Rotate180"></ComboBoxItem>
+                    <ComboBoxItem Content="Rotate270"></ComboBoxItem>
+                </ComboBox>
+                <Button ToolTip="Rotate" Name="btnRotate" Click="btnRotate_Click">
+                    <Image Source="/Rotate;component/Resources/rotate.png"></Image>
+                </Button>
+            </ToolBar>
+            <my:PdfDocumentViewer  Name="pdfDocumentViewer1"  />
+        </DockPanel>
+    </Grid>
+</Window>

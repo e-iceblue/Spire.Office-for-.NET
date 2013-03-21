@@ -1,0 +1,22 @@
+﻿<UserControl x:Class="OpenAndSave.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="620" d:DesignWidth="992" xmlns:my="clr-namespace:Spire.PdfViewer.SL;assembly=Spire.PdfViewer.SL" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" Loaded="UserControl_Loaded">
+
+    <Grid x:Name="LayoutRoot" Background="White">
+        <sdk:TabControl Height="63" HorizontalAlignment="Left" Name="tabControl1" VerticalAlignment="Top" Width="235">
+            <sdk:TabItem Header="Open" Name="tabItem1">
+                <Grid>
+                    <Button Content="Open" Height="27" HorizontalAlignment="Left" Name="btnOpen" VerticalAlignment="Top" Width="65" Click="btnOpen_Click">
+
+                    </Button>
+                    <Button Content="Save" Height="27" HorizontalAlignment="Left" Margin="116,0,0,0" Name="btnSave" VerticalAlignment="Top" Width="60" Click="btnSave_Click" />
+                </Grid>
+            </sdk:TabItem>
+        </sdk:TabControl>
+        <my:PdfViewer Height="Auto" HorizontalAlignment="Stretch" Margin="0,64,0,0" Name="pdfViewer1" VerticalAlignment="Stretch" Width="Auto" />
+    </Grid>
+</UserControl>

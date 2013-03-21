@@ -1,0 +1,98 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
+
+using Microsoft.Win32;
+
+
+namespace Print
+{
+    /// <summary>
+    /// Interaction logic for MainWindow.xaml
+    /// </summary>
+    public partial class MainWindow : Window
+    {
+        public MainWindow()
+        {
+            InitializeComponent();
+        }
+
+        private void btnOpen_Click(object sender, RoutedEventArgs e)
+        {
+            //Open a Doc document.
+            OpenFileDialog dialog = new OpenFileDialog()
+            {
+                Filter = "DOC document(*.doc;*.docx)|*.doc;*.docx|All files(*.*)|*.*",
+                Title = "Open DOC Document",
+                Multiselect = false,
+                InitialDirectory =System.IO.Path.GetFullPath(@"..\..\..\..\..\..\Data")
+            };
+            bool? result = dialog.ShowDialog();
+            if (result.Value)
+            {
+                try
+                {
+                    //Load doc document from file.
+                    this.docDocumentViewer1.LoadFromFile(dialog.FileName);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Error!", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+            }
+        }
+
+        private void btnClose_Click(object sender, RoutedEventArgs e)
+        {
+            //Close current doc document.
+            docDocumentViewer1.CloseDocument();
+        }
+
+        private void btnPrint_Click(object sender, RoutedEventArgs e)
+        {
+            //Show a Print Dialog
+            PrintDialog dialog = new PrintDialog();
+            dialog.MaxPage = this.docDocumentViewer1.PageCount > 0 ? (uint)this.docDocumentViewer1.PageCount : 1;
+            dialog.MinPage = 1;
+            dialog.UserPageRangeEnabled = true;
+            bool? result = dialog.ShowDialog();
+            if (result.Value)
+            {
+                try
+                {
+                    //Set print parnameters.
+                    this.docDocumentViewer1.PrintDialog = dialog;
+                    //Gets the PrintDocument.
+                    dialog.PrintDocument(docDocumentViewer1.PrintDocument.DocumentPaginator, "Print Document");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+            }
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                // Load pdf document from file.
+                this.docDocumentViewer1.LoadFromFile(@"..\..\..\..\..\..\Data\UserForm.docx");               
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+    }
+}
