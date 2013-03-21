@@ -10,7 +10,7 @@ ________________________________________________________________________________
 
 Word Processing
 
-Spire.Office for .NET enables developers to fast generate, load, write, edit and save Word document. It can set text, paragraph and page ormatting after appending sections, paragraphs and text in document. Also, developers can insert image, hyperlink, table, watermark, bookmark, header/footer, comment, textbox, footnote/endnote, OLE object, barcode and edit these elements. What's more, developers can encrypt/decrypt ocument with password or protect Word with different protection types. 
+Spire.Office for .NET enables developers to fast generate, load, view, write, edit, save and print Word document. It can set text, paragraph and page ormatting after appending sections, paragraphs and text in document. Also, developers can insert image, hyperlink, table, watermark, bookmark, header/footer, comment, textbox, footnote/endnote, OLE object, barcode and edit these elements. What's more, developers can encrypt/decrypt ocument with password or protect Word with different protection types. 
 
 Excel Processing
 
@@ -18,7 +18,7 @@ Spire.Office for .NET enables developers to create, load, write, edit and save E
 
 PDF Processing 
 
-Spire.Office for .NET enables developers to generate, load, draw, edit adn save PDF document. It can merge/split PDF, set document properties, view preference and operate on pages, including page setup, page removing, pagination etc. It also support PDF security including encryption/decryption, digital signature. What's more, developers can draw, insert and edit object in PDF, including text, shape, comment, attachment, hyperlink, image, table, number list, formfield, watermark, header/footer etc. Among these object, text and image can be extracted.
+Spire.Office for .NET enables developers to generate, load, view, draw, edit, save and print PDF document. It can merge/split PDF, set document properties, view preference and operate on pages, including page setup, page removing, pagination etc. It also support PDF security including encryption/decryption, digital signature. What's more, developers can draw, insert and edit object in PDF, including text, shape, comment, attachment, hyperlink, image, table, number list, formfield, watermark, header/footer etc. Among these object, text and image can be extracted.
 
 Import/Exprot Data
 
