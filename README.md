@@ -67,7 +67,7 @@ ________________________________________________________________________________
 
 Supports Word, Excel, PDF processing and Data Importing/Exporting in Silverlight(Silverlight 3, 4 and 5). 
 
-<span style="color: #ff0000;">Note:</span> Conversion cannot be supported in Spire.Office for Silverlight.
+<b>NOTE:</b> Conversion cannot be supported in Spire.Office for Silverlight.
 
 <a href="http://www.e-iceblue.com/Introduce/spire-office-for-wpf.html"><b>Spire.Office for WPF</b></a>: 
 
